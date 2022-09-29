@@ -1,0 +1,34 @@
+print "Введите количество строк первой матрицы"
+kolvo_str_1=gets.to_i
+str=1
+matr1=[]
+for i in (0..kolvo_srt_1-1).each do
+  print "Введите числа для #{str} строки"
+  b=gets
+  zn_str=b.split('').map(&:to_i)
+  matr1.push(zn_str)
+  str+=1
+end
+print "Введите количество строк второй матрицы"
+kolvo_str_2=gets.to_i
+str=1
+matr2=[]
+for i in (0..kolvo_srt_2-1).each do
+  print "Введите числа для #{str} строки"
+  b=gets
+  zn_str=b.split('').map(&:to_i)
+  matr2.push(zn_str)
+  str+=1
+end
+matr3_stolb=matr2[0].length
+matr3_str=kolvo_str_1
+matr3=Array.new(matr3_str)
+{Array.new(matr3_stolb) {0}} 
+for i in (0..matr3.length-1).each do
+  for j in (0..matr3[0].length-1).each do
+    for n in (0..matr1.length[0]-1).each do
+      matr3[i][j]+=matr1[i][n]*matr2[k][j]
+    end
+  end
+end
+print matr3
